@@ -1,17 +1,35 @@
 const Alg = {
-  add: (...items)=>({
+  create: (_name, _items)=>({
+    _tag: 'create',
+    _name,
+    _items
+  }),
+  clear: (_inventory)=>({
+    _tag: 'clear',
+    _inventory
+  }),
+  rename: (_newName, _inventory)=>({
+    _tag: 'rename',
+    _newName,
+    _inventory
+  }),
+  add: (_item, _inventory)=>({
     _tag: 'add',
-    items
+    _item,
+    _inventory
   }),
-  remove: (...items)=>({
+  remove: (_inventory, _item)=>({
     _tag: 'remove',
-    items
+    _inventory,
+    _item
   }),
-  replace: (itemsToRemove, itemsToAdd) =>({
+  replace: (_inventory, _itemToRemove, _itemToAdd) =>({
     _tag: 'replace',
-    itemsToRemove,
-    itemsToAdd
+    _itemToRemove,
+    _itemToAdd
   }),
+
+
   
   
 
