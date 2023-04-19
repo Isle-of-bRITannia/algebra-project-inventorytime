@@ -5,20 +5,19 @@ import { Inventory } from '../../../inventory.js';
 
 const rasterize =
   () => match({
-    create   : (_name, _items) => {
+    create   : ({_name, _items}) => {
       return {_name, _items};
     },
     clear: ({_inventory}) =>{
-      _inventory._items = []
-      return {"_name":_inventory._name, "_items":_inventory._items};
+      return {"_name": _inventory._name, "_items":[]};
     },
     rename: ({_newName, _inventory})=>{
       _inventory._name = _newName;
-      return {"_name":_inventory._name, "_items":_inventory._items};
+      return {_inventory}
     },
-    add: ({_item, _inventory })=>{
+    add: ({_item, _inventory})=>{
       _inventory._items.push(_item);
-      return {"_name":_inventory._name, "_items":_inventory._items};
+      return {_inventory};
     }
   });
 

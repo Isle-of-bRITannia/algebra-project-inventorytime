@@ -13,8 +13,8 @@ console.log(inventory);
 // inventory = InventoryAPI.clearInventory(inventory)
 // console.log(inventory);
 
-inventory = InventoryAPI.addToInventory("test5",inventory)
-console.log(inventory);
+// inventory = InventoryAPI.addToInventory("test5",inventory)
+// console.log(inventory);
 
 // inventory = InventoryAPI.addToInventory("test6",inventory)
 // console.log(inventory);
