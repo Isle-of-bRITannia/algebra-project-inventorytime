@@ -28,18 +28,6 @@ const Alg = {
     _itemToRemove,
     _itemToAdd
   }),
-
-
-  
-  
-
-  // Unfortunate but (as far as I can currently tell) somewhat necessary.
-  // fromImage: (img) => {
-  //   return {
-  //     _tag: 'FromImage',
-  //     img
-  //   };
-  // }
 };
 
 export {
