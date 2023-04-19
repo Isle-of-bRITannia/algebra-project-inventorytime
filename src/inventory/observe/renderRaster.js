@@ -1,19 +1,35 @@
-// const renderRaster = (raster) => (ctx) => {  
-//   ctx.fillStyle = 'rgba(255, 255, 255, 0.0)';
-//   ctx.fillRect(0, 0, raster.length, raster[0].length);
-  
-//   for (let i = 0; i < raster.length; i++) {
-//     for (let j = 0; j < raster[i].length; j++) {
-//       ctx.fillStyle = raster[i][j];
-//       ctx.fillRect(j, i, 1, 1);
-//     }
-//   }
-  
-//   return ctx;
-// }
-
 const displayInventory = (inventory)=>{
-  
+    console.log(inventory._inventory);
+
+    const app = document.querySelector("#app");
+    console.log(app);
+
+    const header = document.createElement('h1')
+    header.innerText = "Inventory";
+    app.appendChild(header);
+
+    const lineBreak = document.createElement('br');
+    const lineBreak2 = document.createElement('br');
+    app.appendChild(lineBreak);
+    app.appendChild(lineBreak2);
+
+    const inventoryDiv = document.createElement('div');
+    app.appendChild(inventoryDiv);
+    
+    const title = document.createElement('h2');
+    title.innerText = inventory._inventory._name;
+    inventoryDiv.appendChild(title);
+
+    const list = document.createElement('ul');
+    inventory._inventory._items.forEach(element => {
+        const li = document.createElement('li');
+        li.innerText = element
+        list.appendChild(li);
+    });
+    inventoryDiv.appendChild(list);
+
+    //header.innerText = "Inventory";
+    
 }
 
-export {renderRaster};
+export {displayInventory};

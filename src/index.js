@@ -1,5 +1,6 @@
 import { rasterize } from "./inventory/observe/rasterize.js";
 import { InventoryAPI } from "./inventory/api.js";
+import { displayInventory } from "./inventory/observe/renderRaster.js";
 
 let inventory = InventoryAPI.createInventory("test", "cheese", "eggs", "bacon");
 console.log(inventory);
@@ -29,5 +30,7 @@ console.log(inventory);
 const raster = rasterize()(inventory);
 
 console.log(raster);
+
+const display = displayInventory(raster);
 
 console.log("done");
