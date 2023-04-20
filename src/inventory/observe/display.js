@@ -1,8 +1,7 @@
 const displayInventory = (inventory)=>{
-    console.log(inventory._inventory);
+    console.log(inventory);
 
     const app = document.querySelector("#app");
-    console.log(app);
 
     const header = document.createElement('h1')
     header.innerText = "Inventory";
@@ -17,11 +16,11 @@ const displayInventory = (inventory)=>{
     app.appendChild(inventoryDiv);
     
     const title = document.createElement('h2');
-    title.innerText = inventory._inventory._name;
+    title.innerText = inventory.name;
     inventoryDiv.appendChild(title);
 
     const list = document.createElement('ul');
-    inventory._inventory._items.forEach(element => {
+    inventory.items.forEach(element => {
         const li = document.createElement('li');
         li.innerText = element
         list.appendChild(li);

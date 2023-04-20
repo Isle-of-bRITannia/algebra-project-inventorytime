@@ -18,15 +18,10 @@ const Alg = {
     _item,
     _inventory
   }),
-  remove: (_inventory, _item)=>({
+  remove: (_item, _inventory)=>({
     _tag: 'remove',
-    _inventory,
-    _item
-  }),
-  replace: (_inventory, _itemToRemove, _itemToAdd) =>({
-    _tag: 'replace',
-    _itemToRemove,
-    _itemToAdd
+    _item,
+    _inventory
   }),
 };
 
