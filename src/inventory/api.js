@@ -9,9 +9,8 @@ const API = {
     const returned = Alg.remove(itemToRemove, inventory);
     return Alg.add(itemsToAdd, returned);
   },
-  //(Alg.remove(itemToRemove,inventory),Alg.add(itemsToAdd,inventory)),
   clearInventory: (inventory)=>Alg.clear(inventory),
-  duplicate: (inventory, newName)=>Alg.duplicate(inventory, newName),   //to implement
+  //duplicate: (inventory, newName)=>Alg.duplicate(inventory, newName),   //to implement
   renameInventory: (newName, inventory)=>Alg.rename(newName, inventory),
   
 

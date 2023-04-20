@@ -20,15 +20,10 @@ inventory = InventoryAPI.removeFromInventory("test5",inventory)
 
 inventory = InventoryAPI.replaceInInventory(inventory, "test6", "test8")    //need to fix . Adds but does not remove
 
-
-
-
 //console.log(inventory);
 
-const raster = toNameAndItems(inventory);
+const returnedInventory = toNameAndItems(inventory);
 
-console.log(raster);
-
-const display = displayInventory(raster);
+const display = displayInventory(returnedInventory);
 
 console.log("done");
