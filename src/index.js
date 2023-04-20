@@ -18,7 +18,7 @@ inventory = InventoryAPI.addToInventory("test7",inventory)
 
 inventory = InventoryAPI.removeFromInventory("test5",inventory)
 
-//inventory = InventoryAPI.replaceInInventory(inventory, "test6", "test8")    //need to fix . Adds but does not remove
+inventory = InventoryAPI.replaceInInventory(inventory, "test6", "test8")    //need to fix . Adds but does not remove
 
 
 

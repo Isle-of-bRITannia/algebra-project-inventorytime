@@ -6,8 +6,8 @@ const API = {
   addToInventory: (item, inventory)=>Alg.add(item, inventory),
   removeFromInventory: (item, inventory)=>Alg.remove(item, inventory),
   replaceInInventory: (inventory, itemToRemove, itemsToAdd)=> {
-    Alg.remove(itemToRemove, inventory);
-    Alg.add(itemsToAdd, inventory);
+    const returned = Alg.remove(itemToRemove, inventory);
+    return Alg.add(itemsToAdd, returned);
   },
   //(Alg.remove(itemToRemove,inventory),Alg.add(itemsToAdd,inventory)),
   clearInventory: (inventory)=>Alg.clear(inventory),
