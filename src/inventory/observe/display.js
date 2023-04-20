@@ -24,9 +24,21 @@ const displayInventory = (inventory)=>{
     const list = document.createElement('ul');
     list.innerText = "Items:"
     inventory.items.forEach(element => {
+        console.log(element);
         const li = document.createElement('li');
-        li.innerText = element
         list.appendChild(li);
+        
+        const nested = document.createElement('ul');
+        nested.innerText = element.name;
+        li.appendChild(nested);
+        
+        const nestedLi = document.createElement('li');
+        nestedLi.innerText = `Category: ${element.category}`
+        nested.appendChild(nestedLi);
+
+        const nestedLi2 = document.createElement('li');
+        nestedLi2.innerText = `Quantity: ${element.quantity}`
+        nested.appendChild(nestedLi2);
     });
     inventoryDiv.appendChild(list);
 

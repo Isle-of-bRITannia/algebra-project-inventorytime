@@ -37,9 +37,11 @@ const toNameAndItems = match({
   },
   remove: ({ _item, _inventory }) => {
     const previousNameAndItems = toNameAndItems(_inventory);
-    if(previousNameAndItems.items.indexOf(_item) !== -1){
-      const result = previousNameAndItems.items.splice(previousNameAndItems.items.indexOf(_item), 1);
-    }
+    previousNameAndItems.items.forEach(element => {
+      if(element.name == _item){
+        previousNameAndItems.items.splice(previousNameAndItems.items.indexOf(element), 1);
+      }
+    });
     return previousNameAndItems;
   }
 });

@@ -1,24 +1,25 @@
 import { toNameAndItems } from "./inventory/observe/toNameAndItems.js";
 import { InventoryAPI } from "./inventory/api.js";
 import { displayInventory } from "./inventory/observe/display.js";
+import { Item } from "../item.js";
 
-let inventory = InventoryAPI.createInventory("test", "cheese", "eggs", "bacon");
+let inventory = InventoryAPI.createInventory("test", new Item("cheese", "dairy", 3), new Item("eggs", "meat", 12), new Item("bacon", "meat", 10));
 
-inventory = InventoryAPI.addToInventory("test3",inventory);
+inventory = InventoryAPI.addToInventory(new Item("chicken", "meat", 3),inventory);
 
-inventory = InventoryAPI.renameInventory("renamed",inventory)
+inventory = InventoryAPI.renameInventory("pantry",inventory)
 
-inventory = InventoryAPI.clearInventory(inventory)
+//inventory = InventoryAPI.clearInventory(inventory)
 
-inventory = InventoryAPI.addToInventory("test5",inventory)
+inventory = InventoryAPI.addToInventory(new Item("chocolate", "dessert", 1),inventory)
 
-inventory = InventoryAPI.addToInventory("test6",inventory)
+inventory = InventoryAPI.addToInventory(new Item("tomatoes", "produce", 8),inventory)
 
-inventory = InventoryAPI.addToInventory("test7",inventory)
+inventory = InventoryAPI.addToInventory(new Item("paprika", "spices", 1),inventory)
 
-inventory = InventoryAPI.removeFromInventory("test5",inventory)
+inventory = InventoryAPI.removeFromInventory("chocolate",inventory)
 
-inventory = InventoryAPI.replaceInInventory(inventory, "test6", "test8")    //need to fix . Adds but does not remove
+inventory = InventoryAPI.replaceInInventory(inventory, "tomatoes", new Item("potatoes", "produce", 2000));  
 
 //console.log(inventory);
 

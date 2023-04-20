@@ -19,6 +19,7 @@ body {
 
 .inventory{
   background-color: azure;
-  width:30vw;
-  
+  width:fit-content;
+  padding: 30px;
+
 }
